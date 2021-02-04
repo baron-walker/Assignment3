@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "The Joel Hilton Film Collection";
+}
+
+<div>
+    <p>Movies are cool, movies are great!</p>
+    <br />
+    <img src="~/joelpic.jpg" width="800" />
+</div>
+<br />
+<!-- Link to Podcast (same as header link) -->
+<div>
+    <label asp-action="MyPodcast">Turns out that I have a Podcast! You should check it out!</label>
+    <a asp-action="MyPodcast">Click here</a>
+</div>
+<br />
+<!-- Link to add movie form (same as header link) -->
+<div>
+    <label asp-action="EnterMovie">Add a movie to my list</label>
+    <a asp-action="EnterMovie">Click here</a>
+</div>
