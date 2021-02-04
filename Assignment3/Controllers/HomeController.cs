@@ -34,8 +34,16 @@ namespace Assignment3.Controllers
         [HttpPost]
         public IActionResult EnterMovie(MovieResponse movieResponse)
         {
-            TempStorage.AddApplication(movieResponse);
-            return View("Confirmation", movieResponse);
+            if (ModelState.IsValid)
+            {
+                TempStorage.AddApplication(movieResponse);
+                return View("Confirmation", movieResponse);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
         // Add a route to the EnteredMovies View
